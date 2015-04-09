@@ -31,7 +31,7 @@ And in that controller's template:
 
     {{malarkey-text text=text loop=true}}
 
-And that's it! To see all the available, please see that [Malarkey's documentation](https://github.com/yuanqing/malarkey/blob/master/README.md#api).
+And that's it! To see all the available options, please see [Malarkey's documentation](https://github.com/yuanqing/malarkey/blob/master/README.md#api).
 
 ## Contributing
 
