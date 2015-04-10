@@ -10,7 +10,7 @@ This [Ember CLI](http://www.ember-cli.com/) addon adds a `malarkey-text` compone
 
     ember install ember-malarkey-text
 
-## Usage
+## Basic Usage
 
 In your controller, set up an array of strings:
 
@@ -31,7 +31,33 @@ And in that controller's template:
 
     {{malarkey-text text=text loop=true}}
 
+By default, if the `loop` property is `false`, the last item of text in your `text` array will remain after the steps are finished. If you'd like it delete itself, simply pass `deleteLast=true` to the component.
+
 And that's it! To see all the available options, please see [Malarkey's documentation](https://github.com/yuanqing/malarkey/blob/master/README.md#api).
+
+## Advanced Usage
+
+It's possible to pass step-specific options to the component, like so:
+
+    import Ember from 'ember';
+
+    export default Ember.Controller.extend({
+      init: function () {
+        this._super.apply(this, arguments);
+
+        this.set('text', [
+          {
+            text: "I'm sorry, Dave...",
+            typeSpeed: 1000,
+            pauseDelay: 2500,
+            deleteSpeed: 1000
+          },
+          "I'm afraid I can't do that."
+        ];
+      }
+    });
+
+In your `text` property, you can mix option-filled objects, and simple strings. When an option isn't declared, the component default will be used.
 
 ## Contributing
 
