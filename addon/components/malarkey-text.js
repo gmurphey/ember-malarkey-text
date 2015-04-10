@@ -35,7 +35,7 @@ export default Ember.Component.extend({
     m = malarkey(this.get('element'), this.get('_options'));
 
     this.get('text').forEach(function (txt) {
-      m.type(txt).pause().delete();
+      m.type(txt.text || txt, txt.typeSpeed).pause(txt.pauseDelay).delete(txt.deleteSpeed);
     });
   })
 });
