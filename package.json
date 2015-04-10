@@ -1,6 +1,6 @@
 {
   "name": "ember-malarkey-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A component that gives text a typewriter/ticker effect.",
   "directories": {
     "doc": "doc",
