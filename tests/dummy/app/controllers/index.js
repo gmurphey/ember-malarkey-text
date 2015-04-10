@@ -5,7 +5,12 @@ export default Ember.Controller.extend({
     this._super.apply(this, arguments);
 
     this.set('text', [
-      "I'm sorry, Dave...",
+      {
+        text: "I'm sorry, Dave...",
+        typeSpeed: 20,
+        pauseDelay: 500,
+        deleteSpeed: 20
+      },
       "I'm afraid I can't do that."
     ]);
   }
