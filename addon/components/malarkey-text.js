@@ -22,6 +22,7 @@ export default Ember.Component.extend({
 
       return props;
     };
+    var deleteLast = (this.get('loop')) ? true : this.get('deleteLast') || false;
     var m;
 
     this.set('_options', getOptions.call(this, [
@@ -34,8 +35,12 @@ export default Ember.Component.extend({
 
     m = malarkey(this.get('element'), this.get('_options'));
 
-    this.get('text').forEach(function (txt) {
-      m.type(txt.text || txt, txt.typeSpeed).pause(txt.pauseDelay).delete(txt.deleteSpeed);
+    this.get('text').forEach(function (txt, index, arr) {
+      m.type(txt.text || txt, txt.typeSpeed).pause(txt.pauseDelay);
+
+      if (deleteLast || (index < (arr.length - 1))) {
+        m.delete(txt.deleteSpeed);
+      }
     });
   })
 });
