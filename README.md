@@ -1,5 +1,7 @@
 # ember-malarkey-text
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/gmurphey/ember-malarkey-text.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/gmurphey/ember-malarkey-text.svg?branch=master)](https://travis-ci.org/gmurphey/ember-malarkey-text)
 
 An Ember component wrapping the [Malarkey](https://github.com/yuanqing/malarkey) project, which gives a DOM element a typewriter/ticker effect.
